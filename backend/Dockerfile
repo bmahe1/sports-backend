@@ -1,12 +1,11 @@
-FROM node:18
+FROM public.ecr.aws/docker/library/node:18-alpine
 
 WORKDIR /app
 
-COPY package.json .
-COPY products.json .
-COPY server.js .
-
+COPY package*.json ./
 RUN npm install
+
+COPY . .
 
 EXPOSE 3000
 
