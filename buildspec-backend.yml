@@ -20,7 +20,7 @@ phases:
       - echo "Logging into ECR..."
       - aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin $ECR_REPO
       - echo "Updating kubeconfig..."
-      - aws eks update-kubeconfig --name $CLUSTER_NAME --region $REGION
+      - aws eks update-kubeconfig --name cluster-1 --region us-east-1
 
   build:
     commands:
