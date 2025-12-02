@@ -2,16 +2,14 @@ version: 0.2
 
 env:
   variables:
-    ECR_REPO: "YOUR_ECR_REPO"
-    REGION: "ap-south-1"
-    CLUSTER_NAME: "YOUR_CLUSTER"
+    ECR_REPO: "969317006731.dkr.ecr.us-east-1.amazonaws.com/repo-1"
+    REGION: "us-east-1"
+    CLUSTER_NAME: "cluster-1"
     DEPLOYMENT_NAME: "backend-deployment"
     CONTAINER_NAME: "backend"
 
 phases:
   install:
-    runtime-versions:
-      docker: 20
     commands:
       - echo "Installing kubectl..."
       - curl -o kubectl https://amazon-eks.s3.amazonaws.com/1.29.0/2024-01-04/bin/linux/amd64/kubectl
