@@ -1,7 +1,7 @@
 {
   "AWSEBDockerrunVersion": 1,
   "Image": {
-    "Name": "maheshbmahesh/azure-backend:252",
+    "Name": "maheshbmahesh/azure-backend:latest",
     "Update": "true"
   },
   "Ports": [
